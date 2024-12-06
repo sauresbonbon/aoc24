@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class D4 implements IDX {
-    String inputPath  = "C:\\Users\\nitsc\\Desktop\\aoc2024\\src\\d4\\liv\\input";
+    String inputPath  = "C:\\Users\\nitsc\\Desktop\\aoc2024\\src\\d4\\d5.liv\\input";
     List<String> input;
     int horizontal, vertical, diagonal = 0;
     int hits1 = 0;
