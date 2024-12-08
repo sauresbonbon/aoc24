@@ -16,7 +16,6 @@ public class D2 implements IDX {
     int safeReportsStar1 = 0;
     int safeReportsStar2 = 0;
 
-    @Override
     public void readInput() {
         try {
             var lines = Files.readAllLines(Paths.get(input));

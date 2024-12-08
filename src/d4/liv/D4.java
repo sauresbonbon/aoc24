@@ -15,7 +15,6 @@ public class D4 implements IDX {
     int hits1 = 0;
     int hits2 = 0;
 
-    @Override
     public void readInput() {
         try {
             input = Files.readAllLines(Paths.get(inputPath));

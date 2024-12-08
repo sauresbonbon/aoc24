@@ -12,7 +12,6 @@ public class D3 implements IDX {
     String input;
     long res = 0;
     long res2 = 0;
-    @Override
     public void readInput() {
         try {
             this.input = Files.readString(Paths.get(inputPath));

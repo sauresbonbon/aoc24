@@ -3,7 +3,6 @@ package d5.till;
 import main.IDX;
 
 public class D5 implements IDX {
-    @Override
     public void readInput() {
 
     }

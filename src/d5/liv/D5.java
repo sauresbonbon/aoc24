@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class D5 implements IDX {
-    String inputPath  = "C:\\Users\\nitsc\\Desktop\\aoc2024\\src\\d5\\liv\\input";
+    String inputPath  = String.format("%s/src/d5/liv/input", System.getProperty("user.dir"));
+
     String input;
     List<Tuple<Integer, Integer>> rules;
     List<List<Integer>> updates ;
@@ -20,9 +21,9 @@ public class D5 implements IDX {
 
     int sum = 0;
     int incorrectSum = 0;
-    @Override
     public void readInput() {
         try {
+            System.out.println(inputPath);
             input = Files.readString(Paths.get(inputPath));
         } catch(IOException e) {
             System.out.println("Error bei readInput()");
