@@ -60,7 +60,7 @@ public class D3 implements IDX {
 
     @Override
     public void printResult() {
-        System.out.println(STR."Result1: \{res}");
-        System.out.println(STR."Result2: \{res2}");
+        System.out.println(String.format("Result1: %s", res));
+        System.out.println(String.format("Result2: %s", res2));
     }
 }

@@ -135,7 +135,7 @@ public class D4 implements IDX {
 
     @Override
     public void printResult() {
-        System.out.printf(STR."XMAS occurs \{hits1} times!\n");
-        System.out.printf(STR."X-MAS occurs \{hits2} times!");
+        System.out.printf("XMAS occurs %d times!\n", hits1);
+        System.out.printf("X-MAS occurs %d times!", hits2);
     }
 }

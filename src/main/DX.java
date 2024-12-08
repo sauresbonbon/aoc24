@@ -8,7 +8,7 @@ public abstract class DX implements IDX {
     String input;
     DX(int day) {
         String projectPath = System.getProperty("user.dir");
-        String inputPath = STR."\{projectPath}\\src\\d\{day}\\d5.liv\\input";
+        String inputPath = String.format("../%s", projectPath);
 
         try {
             input = Files.readString(Paths.get(inputPath));

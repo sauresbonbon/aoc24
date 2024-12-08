@@ -119,7 +119,7 @@ public class D5 implements IDX {
 
     @Override
     public void printResult() {
-        System.out.println(STR."Sum: \{sum}");
-        System.out.println(STR."Incorrect Sum: \{incorrectSum}");
+        System.out.println(String.format("Sum: %s", sum));
+        System.out.println(String.format("Incorrect Sum: %s", incorrectSum));
     }
 }

@@ -19,6 +19,6 @@ public class Tuple<T, U> {
 
     @Override
     public String toString() {
-        return STR."(\{first}, \{second})";
+        return String.format("%s, %s", first, second);
     }
 }
