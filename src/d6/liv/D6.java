@@ -16,10 +16,7 @@ public class D6 extends DX {
 
     boolean inMap(int[] position, Directions direction) {
         int[] newPosition = nextPosition(position, direction);
-        if (newPosition[0] < 0 || newPosition[0] >= cols || newPosition[1] < 0 || newPosition[1] >= rows) {
-            return false;
-        }
-        return true;
+        return newPosition[0] >= 0 && newPosition[0] < cols && newPosition[1] >= 0 && newPosition[1] < rows;
     }
 
     int[] nextPosition(int[] position, Directions direction) {
@@ -30,7 +27,6 @@ public class D6 extends DX {
         for (String row : map) {
             System.out.println(row);
         }
-        System.out.println("\n");
     }
 
     void setPoint(int[] position, char c) {
@@ -75,6 +71,7 @@ public class D6 extends DX {
 
     void resetMap() {
         map = input.split("\\R"); // map reset
+        guardDirection = Directions.UP;
     }
 
     boolean timeOutWalk() {
@@ -91,7 +88,8 @@ public class D6 extends DX {
         long startTime = System.currentTimeMillis();
 
         while(inMap(guardPosition, guardDirection) && !timeout) {
-            timeout = System.currentTimeMillis() - startTime > 500;
+            if (System.currentTimeMillis() - startTime > 5)
+                timeout = true;
 
             int[] newPosition = nextPosition(guardPosition, guardDirection);
             if (map[newPosition[1]].charAt(newPosition[0]) == '#') {
@@ -110,8 +108,8 @@ public class D6 extends DX {
         resetMap();
         for(int row = 0; row < map.length; row++) {
             for(int col = 0; col < map[row].length(); col++) {
-                if(map[row].charAt(col) != '#' && map[row].charAt(col) != '^') {
-                    setPoint(new int[] {col, row}, 'x');
+                if(map[row].charAt(col) == '.') {
+                    setPoint(new int[] {col, row}, '#');
                     boolean timeout = timeOutWalk();
                     if (timeout)
                         loopHoles++;

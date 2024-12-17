@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class D5 implements IDX {
-    String inputPath  = String.format("%s/src/d5/liv/input", System.getProperty("user.dir"));
+    String inputPath  = String.format("%s/src/d5/d7.d7.liv/input", System.getProperty("user.dir"));
 
     String input;
     List<Tuple<Integer, Integer>> rules;

@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.regex.*;
 
 public class D3 implements IDX {
-    String inputPath  = "C:\\Users\\nitsc\\Desktop\\aoc2024\\src\\d3\\d4.d5.liv\\input";
+    String inputPath  = "C:\\Users\\nitsc\\Desktop\\aoc2024\\src\\d3\\d4.d5.d7.d7.liv\\input";
     String input;
     long res = 0;
     long res2 = 0;
